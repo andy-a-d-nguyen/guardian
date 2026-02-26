@@ -219,7 +219,7 @@ func unprivilegedMounts() []specs.Mount {
 		{Destination: "/proc", Type: "proc", Source: "proc", Options: []string{"nosuid", "noexec", "nodev"}},
 	}
 
-	if !cgroups.IsCgroup2UnifiedMode() {
+	if !gardencgroups.IsCgroup2UnifiedMode() {
 		mounts = append(mounts, specs.Mount{Destination: "/sys/fs/cgroup", Type: "cgroup", Source: "cgroup", Options: []string{"ro", "nosuid", "noexec", "nodev"}})
 	}
 	return mounts

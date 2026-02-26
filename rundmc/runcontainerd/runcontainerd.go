@@ -131,6 +131,10 @@ func (r *RunContainerd) Create(log lager.Logger, id string, bundle goci.Bndl, pi
 		log.Error("failed-to-set-unified-resources", err)
 		return err
 	}
+
+	// Add cgroup bind mount for cgroups v2 (no-op on Windows and cgroups v1)
+	r.cgroupManager.AddCgroupBindMount(&bundle)
+
 	containerRootUID := idmapper.MappingList(bundle.Spec.Linux.UIDMappings).Map(0)
 	containerRootGID := idmapper.MappingList(bundle.Spec.Linux.GIDMappings).Map(0)
 

@@ -13,6 +13,7 @@ import (
 type CgroupManager interface {
 	SetUseMemoryHierarchy(handle string) error
 	SetUnifiedResources(bundle goci.Bndl) error
+	AddCgroupBindMount(bundle *goci.Bndl)
 }
 
 type cgroupManager struct {
@@ -54,4 +55,8 @@ func (m cgroupManager) SetUseMemoryHierarchy(handle string) error {
 
 func (m cgroupManager) SetUnifiedResources(bundle goci.Bndl) error {
 	return m.setUnifiedResources(bundle)
+}
+
+func (m cgroupManager) AddCgroupBindMount(bundle *goci.Bndl) {
+	m.addCgroupBindMount(bundle)
 }

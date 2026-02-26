@@ -46,7 +46,6 @@ import (
 	"code.cloudfoundry.org/localip"
 	"github.com/eapache/go-resiliency/retrier"
 	uuid "github.com/nu7hatch/gouuid"
-
 	"github.com/opencontainers/runtime-spec/specs-go"
 )
 
