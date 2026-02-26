@@ -196,9 +196,9 @@ var _ = Describe("Partially shared containers (peas)", func() {
 
 				JustBeforeEach(func() {
 					stdout := gbytes.NewBuffer()
-					proc, err := ctr.Run(garden.ProcessSpec{
+					_, err := ctr.Run(garden.ProcessSpec{
 						Path:  "sh",
-						Args:  []string{"-c", "echo done && sleep 3600"},
+						Args:  []string{"-c", "cat /proc/self/cgroup && echo done && sleep 3600"},
 						Image: garden.ImageRef{URI: "raw://" + peaRootfs},
 						OverrideContainerLimits: &garden.ProcessLimits{
 							CPU: garden.CPULimits{LimitInShares: 128},
@@ -209,11 +209,12 @@ var _ = Describe("Partially shared containers (peas)", func() {
 					})
 					Expect(err).NotTo(HaveOccurred())
 					Eventually(stdout).Should(gbytes.Say("done"))
-
-					// In cgroups v2, with OverrideContainerLimits != nil, the process is put in its own cgroup.
-					// Without CPU throttling: /sys/fs/cgroup/garden-<tag>/<process-id>
-					// With CPU throttling: /sys/fs/cgroup/garden-<tag>/good/<process-id> or .../bad/<process-id>
-					cgroupPath = findPeaCgroupPath(proc.ID())
+					cgroupProcLines := strings.Split(string(stdout.Contents()), "\n")
+					var cgroupRelativePath string
+					Expect(cgroupProcLines).To(HaveLen(3))
+					procLineSections := strings.Split(cgroupProcLines[0], ":")
+					cgroupRelativePath = procLineSections[2]
+					cgroupPath = filepath.Join(gardencgroups.Root, cgroupRelativePath)
 				})
 
 				Context("when started with low cpu limit turned on", func() {
@@ -491,25 +492,6 @@ func collectPeaPids(handle string) []string {
 	}
 
 	return collectRuncPeaPids(handle)
-}
-
-func findPeaCgroupPath(processID string) string {
-	gardenCgroupDir := fmt.Sprintf("%s-%s", gardencgroups.Garden, config.Tag)
-
-	if cpuThrottlingEnabled() {
-		// When CPU throttling is enabled, process could be in good or bad cgroup
-		goodPath := filepath.Join(gardencgroups.Root, gardenCgroupDir, gardencgroups.GoodCgroupName, processID)
-		if _, err := os.Stat(goodPath); err == nil {
-			return goodPath
-		}
-		badPath := filepath.Join(gardencgroups.Root, gardenCgroupDir, gardencgroups.BadCgroupName, processID)
-		if _, err := os.Stat(badPath); err == nil {
-			return badPath
-		}
-	}
-
-	// Default path (no CPU throttling)
-	return filepath.Join(gardencgroups.Root, gardenCgroupDir, processID)
 }
 
 func collectContainerdPeaPids(handle string) []string {

@@ -513,10 +513,6 @@ func (cmd *CommonCommand) wireContainerizer(
 		WithProcess(baseProcess).
 		WithRootFSPropagation("private")
 
-	if gardencgroups.IsCgroup2UnifiedMode() {
-		baseBundle = baseBundle.WithNamespace(goci.CgroupNamespace)
-	}
-
 	uidMappings, gidMappings := cmd.idMappings()
 	unprivilegedBundle := baseBundle.
 		WithNamespace(goci.UserNamespace).
