@@ -211,8 +211,9 @@ var _ = Describe("Partially shared containers (peas)", func() {
 					Eventually(stdout).Should(gbytes.Say("done"))
 
 					// In cgroups v2, with OverrideContainerLimits != nil, the process is put in its own cgroup with a name like
-					// /sys/fs/cgroup/garden/<process-id>
-					cgroupPath = filepath.Join(gardencgroups.Root, gardencgroups.Garden, proc.ID())
+					// /sys/fs/cgroup/garden-<tag>/<process-id>
+					gardenCgroupDir := fmt.Sprintf("%s-%s", gardencgroups.Garden, config.Tag)
+					cgroupPath = filepath.Join(gardencgroups.Root, gardenCgroupDir, proc.ID())
 				})
 
 				Context("when started with low cpu limit turned on", func() {
