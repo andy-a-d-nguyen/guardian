@@ -11,21 +11,21 @@ replace (
 )
 
 require (
-	code.cloudfoundry.org/archiver v0.66.0
-	code.cloudfoundry.org/clock v1.65.0
-	code.cloudfoundry.org/commandrunner v0.59.0
-	code.cloudfoundry.org/debugserver v0.91.0
-	code.cloudfoundry.org/garden v0.0.0-20260408024713-8ea40dc96c05
+	code.cloudfoundry.org/archiver v0.67.0
+	code.cloudfoundry.org/clock v1.66.0
+	code.cloudfoundry.org/commandrunner v0.61.0
+	code.cloudfoundry.org/debugserver v0.92.0
+	code.cloudfoundry.org/garden v0.0.0-20260409204432-46ce0a86f9bc
 	code.cloudfoundry.org/grootfs v0.30.0
-	code.cloudfoundry.org/idmapper v0.0.0-20260408024822-eda0e1f1fdfe
-	code.cloudfoundry.org/lager/v3 v3.65.0
-	code.cloudfoundry.org/localip v0.67.0
+	code.cloudfoundry.org/idmapper v0.0.0-20260415024909-a37c3c13fc35
+	code.cloudfoundry.org/lager/v3 v3.66.0
+	code.cloudfoundry.org/localip v0.68.0
 	github.com/BurntSushi/toml v1.6.0
 	github.com/cloudfoundry/dropsonde v1.1.0
 	github.com/cloudfoundry/gosigar v1.3.117
 	github.com/containerd/cgroups/v3 v3.1.3
 	github.com/containerd/containerd/api v1.10.0
-	github.com/containerd/containerd/v2 v2.2.2
+	github.com/containerd/containerd/v2 v2.2.3
 	github.com/containerd/errdefs v1.0.0
 	github.com/containerd/typeurl/v2 v2.2.3
 	github.com/eapache/go-resiliency v1.7.0
@@ -116,8 +116,8 @@ require (
 	golang.org/x/net v0.53.0 // indirect
 	golang.org/x/sync v0.20.0 // indirect
 	golang.org/x/text v0.36.0 // indirect
-	golang.org/x/tools v0.43.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260406210006-6f92a3bedf2d // indirect
+	golang.org/x/tools v0.44.0 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260414002931-afd174a4e478 // indirect
 	google.golang.org/grpc v1.80.0 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 )
