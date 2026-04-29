@@ -11,15 +11,15 @@ replace (
 )
 
 require (
-	code.cloudfoundry.org/archiver v0.67.0
-	code.cloudfoundry.org/clock v1.67.0
+	code.cloudfoundry.org/archiver v0.68.0
+	code.cloudfoundry.org/clock v1.68.0
 	code.cloudfoundry.org/commandrunner v0.61.0
-	code.cloudfoundry.org/debugserver v0.93.0
+	code.cloudfoundry.org/debugserver v0.94.0
 	code.cloudfoundry.org/garden v0.0.0-20260415024759-5d3f072af7f8
 	code.cloudfoundry.org/grootfs v0.30.0
-	code.cloudfoundry.org/idmapper v0.0.0-20260415024909-a37c3c13fc35
-	code.cloudfoundry.org/lager/v3 v3.66.0
-	code.cloudfoundry.org/localip v0.68.0
+	code.cloudfoundry.org/idmapper v0.0.0-20260429025156-0e7b05e10929
+	code.cloudfoundry.org/lager/v3 v3.67.0
+	code.cloudfoundry.org/localip v0.69.0
 	github.com/BurntSushi/toml v1.6.0
 	github.com/cloudfoundry/dropsonde v1.1.0
 	github.com/cloudfoundry/gosigar v1.3.118
@@ -37,8 +37,8 @@ require (
 	github.com/moby/sys/reexec v0.1.0
 	github.com/moby/sys/user v0.4.0
 	github.com/nu7hatch/gouuid v0.0.0-20131221200532-179d4d0c4d8d
-	github.com/onsi/ginkgo/v2 v2.28.1
-	github.com/onsi/gomega v1.39.1
+	github.com/onsi/ginkgo/v2 v2.28.3
+	github.com/onsi/gomega v1.40.0
 	github.com/opencontainers/cgroups v0.0.6
 	github.com/opencontainers/go-digest v1.0.0
 	github.com/opencontainers/image-spec v1.1.1
@@ -66,13 +66,13 @@ require (
 	github.com/cilium/ebpf v0.21.0 // indirect
 	github.com/cloudfoundry/sonde-go v0.0.0-20251217143644-d1670a435f2a // indirect
 	github.com/containerd/console v1.0.5 // indirect
-	github.com/containerd/continuity v0.4.5 // indirect
+	github.com/containerd/continuity v0.5.0 // indirect
 	github.com/containerd/errdefs/pkg v0.3.0 // indirect
 	github.com/containerd/fifo v1.1.0 // indirect
 	github.com/containerd/go-runc v1.1.0 // indirect
 	github.com/containerd/log v0.1.0 // indirect
 	github.com/containerd/platforms v1.0.0-rc.4 // indirect
-	github.com/containerd/plugin v1.0.0 // indirect
+	github.com/containerd/plugin v1.1.0 // indirect
 	github.com/containerd/ttrpc v1.2.8 // indirect
 	github.com/coreos/go-systemd/v22 v22.7.0 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.7 // indirect
@@ -117,7 +117,7 @@ require (
 	golang.org/x/sync v0.20.0 // indirect
 	golang.org/x/text v0.36.0 // indirect
 	golang.org/x/tools v0.44.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260420184626-e10c466a9529 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260427160629-7cedc36a6bc4 // indirect
 	google.golang.org/grpc v1.80.0 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 )

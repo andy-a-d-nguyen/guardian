@@ -1,7 +1,7 @@
-# code.cloudfoundry.org/archiver v0.67.0
+# code.cloudfoundry.org/archiver v0.68.0
 ## explicit; go 1.25.0
 code.cloudfoundry.org/archiver/extractor/test_helper
-# code.cloudfoundry.org/clock v1.67.0
+# code.cloudfoundry.org/clock v1.68.0
 ## explicit; go 1.25.0
 code.cloudfoundry.org/clock
 code.cloudfoundry.org/clock/fakeclock
@@ -12,7 +12,7 @@ code.cloudfoundry.org/commandrunner/fake_command_runner
 code.cloudfoundry.org/commandrunner/fake_command_runner/matchers
 code.cloudfoundry.org/commandrunner/linux_command_runner
 code.cloudfoundry.org/commandrunner/windows_command_runner
-# code.cloudfoundry.org/debugserver v0.93.0
+# code.cloudfoundry.org/debugserver v0.94.0
 ## explicit; go 1.25.0
 code.cloudfoundry.org/debugserver
 # code.cloudfoundry.org/garden v0.0.0-20260415024759-5d3f072af7f8 => ../garden
@@ -30,17 +30,17 @@ code.cloudfoundry.org/garden/transport
 # code.cloudfoundry.org/grootfs v0.30.0 => ../grootfs
 ## explicit; go 1.25.0
 code.cloudfoundry.org/grootfs/commands/config
-# code.cloudfoundry.org/idmapper v0.0.0-20260415024909-a37c3c13fc35 => ../idmapper
+# code.cloudfoundry.org/idmapper v0.0.0-20260429025156-0e7b05e10929 => ../idmapper
 ## explicit; go 1.25.0
 code.cloudfoundry.org/idmapper
-# code.cloudfoundry.org/lager/v3 v3.66.0
+# code.cloudfoundry.org/lager/v3 v3.67.0
 ## explicit; go 1.25.0
 code.cloudfoundry.org/lager/v3
 code.cloudfoundry.org/lager/v3/chug
 code.cloudfoundry.org/lager/v3/internal/truncate
 code.cloudfoundry.org/lager/v3/lagerctx
 code.cloudfoundry.org/lager/v3/lagertest
-# code.cloudfoundry.org/localip v0.68.0
+# code.cloudfoundry.org/localip v0.69.0
 ## explicit; go 1.25.0
 code.cloudfoundry.org/localip
 # cyphar.com/go-pathrs v0.2.4
@@ -237,7 +237,7 @@ github.com/containerd/containerd/v2/pkg/tracing
 github.com/containerd/containerd/v2/plugins
 github.com/containerd/containerd/v2/plugins/services
 github.com/containerd/containerd/v2/version
-# github.com/containerd/continuity v0.4.5
+# github.com/containerd/continuity v0.5.0
 ## explicit; go 1.21
 github.com/containerd/continuity/devices
 github.com/containerd/continuity/fs
@@ -262,8 +262,8 @@ github.com/containerd/log
 # github.com/containerd/platforms v1.0.0-rc.4
 ## explicit; go 1.24
 github.com/containerd/platforms
-# github.com/containerd/plugin v1.0.0
-## explicit; go 1.20
+# github.com/containerd/plugin v1.1.0
+## explicit; go 1.22
 github.com/containerd/plugin
 # github.com/containerd/ttrpc v1.2.8
 ## explicit; go 1.22
@@ -396,8 +396,8 @@ github.com/mrunalp/fileutils
 # github.com/nu7hatch/gouuid v0.0.0-20131221200532-179d4d0c4d8d
 ## explicit
 github.com/nu7hatch/gouuid
-# github.com/onsi/ginkgo/v2 v2.28.1
-## explicit; go 1.24.0
+# github.com/onsi/ginkgo/v2 v2.28.3
+## explicit; go 1.25.0
 github.com/onsi/ginkgo/v2
 github.com/onsi/ginkgo/v2/config
 github.com/onsi/ginkgo/v2/formatter
@@ -420,7 +420,7 @@ github.com/onsi/ginkgo/v2/internal/reporters
 github.com/onsi/ginkgo/v2/internal/testingtproxy
 github.com/onsi/ginkgo/v2/reporters
 github.com/onsi/ginkgo/v2/types
-# github.com/onsi/gomega v1.39.1
+# github.com/onsi/gomega v1.40.0
 ## explicit; go 1.24.0
 github.com/onsi/gomega
 github.com/onsi/gomega/format
@@ -660,7 +660,7 @@ golang.org/x/tools/internal/stdlib
 golang.org/x/tools/internal/typeparams
 golang.org/x/tools/internal/typesinternal
 golang.org/x/tools/internal/versions
-# google.golang.org/genproto/googleapis/rpc v0.0.0-20260420184626-e10c466a9529
+# google.golang.org/genproto/googleapis/rpc v0.0.0-20260427160629-7cedc36a6bc4
 ## explicit; go 1.25.0
 google.golang.org/genproto/googleapis/rpc/status
 # google.golang.org/grpc v1.80.0
